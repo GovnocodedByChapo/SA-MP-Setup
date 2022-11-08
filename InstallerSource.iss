@@ -8,6 +8,7 @@
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
 
 [Setup]
+OutputDir="X:\SA-MP Lib Installer"
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppPublisher={#MyAppPublisher}
@@ -39,18 +40,17 @@ Name: "sampr1"; Description: "SA:MP R1"; Types: full
 Name: "ASI"; Description: "ASI Loader"; Types: full
 
 Name: "sampfuncs"; Description: "SAMPFUNCS"; Types: full
+Name: "sampfuncs\v541"; Description: "v5.4.1 (Р РµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ)"; Flags: exclusive
 Name: "sampfuncs\v533"; Description: "v5.3.3"; Flags: exclusive
-Name: "sampfuncs\v541"; Description: "v5.4.1 (Рекомендуется)"; Flags: exclusive
-
 
 Name: "cleo"; Description: "CLEO"; Types: full
-Name: "cleo\4.1"; Description: "v4.1"; Flags: exclusive
-Name: "cleo\4.4.1"; Description: "v4.4.1 (Рекомендуется)"; Flags: exclusive
+Name: "cleo\4_4_1"; Description: "v4.4.1 (Р РµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ)"; Flags: exclusive
+Name: "cleo\4_1"; Description: "v4.1"; Flags: exclusive
 
 Name: "moonloader"; Description: "MoonLoader v0.26"; Types: full
 Name: "modloader"; Description: "ModLoader"; Types: full
 
-Name: "mlib"; Description: "Библиотеки для MoonLoader"; Types: full
+Name: "mlib"; Description: "Р‘РёР±Р»РёРѕС‚РµРєРё РґР»СЏ MoonLoader"; Types: full
 Name: "mlib\SAMPlua"; Description: "SAMP.lua (v2.3.0)"; Flags: checkablealone
 Name: "mlib\mimgui"; Description: "MImGui"; Flags: checkablealone
 Name: "mlib\imgui"; Description: "ImGui"; Flags: checkablealone
@@ -78,13 +78,13 @@ Name: "mlib\MoonMonet"; Description: "MoonMonet"; Flags: checkablealone
 
 [Files]
 // ASI Loader, CLEO, SAMPFUNCS, gta_sa.exe US 1.0, MoonLoader
+Source: "X:\SA-MP Lib Installer\FILES\SAMP_R1\*"; DestDir: "{app}"; Flags: ignoreversion; Components: sampr1
+Source: "X:\SA-MP Lib Installer\FILES\MODLOADER\*"; DestDir: "{app}"; Flags: ignoreversion; Components: modloader
 Source: "X:\SA-MP Lib Installer\FILES\ASILOADER\*"; DestDir: "{app}"; Flags: ignoreversion; Components: ASI
 
-
-Source: "X:\SA-MP Lib Installer\FILES\CLEO\*"; DestDir: "{app}"; Flags: ignoreversion; Components: cleo
-
-Source: "X:\SA-MP Lib Installer\FILES\CLEO\4.1\*"; DestDir: "{app}"; Flags: ignoreversion; Components: cleo\4.1
-Source: "X:\SA-MP Lib Installer\FILES\CLEO\4.4.1\*"; DestDir: "{app}"; Flags: ignoreversion; Components: cleo\4.4.1
+// CLEO
+Source: "X:\SA-MP Lib Installer\FILES\CLEO\4_1\*"; DestDir: "{app}"; Flags: ignoreversion; Components: cleo\4_1
+Source: "X:\SA-MP Lib Installer\FILES\CLEO\4_4_1\*"; DestDir: "{app}"; Flags: ignoreversion; Components: cleo\4_4_1
 
 // SAMPFUNCS
 Source: "X:\SA-MP Lib Installer\FILES\SAMPFUNCS\v533\*"; DestDir: "{app}"; Flags: ignoreversion; Components: sampfuncs\v533
